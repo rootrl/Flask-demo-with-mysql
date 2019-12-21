@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 
-export FLASK_APP=app
-export FLASK_ENV=development
-flask run --host 0.0.0.0 -p 8989
+python3 manage.py runserver -h 0.0.0.0 -p 8989

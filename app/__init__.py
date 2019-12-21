@@ -17,11 +17,8 @@ def create_app(config_name):
     # 扩展初始化配置
     db.init_app(app)
 
-    # from .frontend import frontend
-
-    # a simple page that says hello
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
+    # TODO:: just import frontend and backend, and the router defined in modules's __init__.py
+    from .frontend import article
+    app.register_blueprint(article.bp)
 
     return app
