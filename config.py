@@ -37,7 +37,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'can you guess it'
     DEBUG = True
     # sqlalchemy format: mysql+pymysql://username:password@host/database
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root123@localhost/flask_project?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:root123@localhost/flask_project?charset=utf8'
     # 当关闭数据库是否自动提交事务
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     # 是否追踪修改
@@ -54,20 +54,20 @@ class DevelopmentConfig(Config):
     """开发环境
     """
     
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root123@localhost/flask_project?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:root123@localhost/flask_project?charset=utf8'
 
 
 class TestConfig(Config):
     """测试环境
     """
 
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root123@localhost/flask_project?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:root123@localhost/flask_project?charset=utf8'
 
 
 class ProductionConfig(Config):
     """生产环境
     """
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root123@localhost/flask_project?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:root123@localhost/flask_project?charset=utf8'
 
 
 # 设置配置映射
