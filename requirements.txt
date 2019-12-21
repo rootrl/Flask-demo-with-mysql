@@ -5,3 +5,4 @@ Flask-Migrate
 pymysql
 gunicorn
 gevent
+wsgi
