@@ -35,3 +35,7 @@ python3 manage.py db upgrade
 
 # Run
 ./start.sh
+
+# Demo
+
+http://66.42.40.22:8989/article/show?id=1
